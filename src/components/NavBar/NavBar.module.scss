@@ -1,0 +1,88 @@
+/* NavBar.module.scss */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 80px;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid black;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 2rem;
+  color: black;
+  text-decoration: none;
+  color: rgb(34,62,87);
+}
+
+.navLinksContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 1;
+  gap: 2rem;
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+
+  &:visited {
+    color: black;
+  }
+
+  &:hover {
+    color: red;
+    transition: color 0.3s ease;
+  }
+
+  &_active {
+    color: red;
+
+    &:hover {
+      color: darkred;
+      transition: color 0.3s ease;
+    }
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.icon {
+  font-size: 25px;
+  color: black;
+  margin-right: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+    transition: color 0.3s ease;
+  }
+}
+
+.icon.fa-search {
+  cursor: pointer;
+}

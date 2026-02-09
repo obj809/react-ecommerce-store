@@ -1,0 +1,80 @@
+/* OrderSummary.module.scss */
+
+.orderSummary {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summaryHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.summaryDetails {
+    margin-top: 20px;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.deliveryInfo {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkoutButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darkred;
+    }
+}
+
+.continueButton {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+.eligibleInfo {
+    font-size: 12px;
+    color: #555;
+    margin-top: 20px;
+    text-align: center;
+}

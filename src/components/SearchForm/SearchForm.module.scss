@@ -1,0 +1,43 @@
+/* SearchForm.module.scss */
+
+.searchFormContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton:hover {
+  color: #555;
+}

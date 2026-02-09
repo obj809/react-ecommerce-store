@@ -1,0 +1,25 @@
+// FavoriteButton.module.scss
+.button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.button svg {
+    color: #e74c3c;
+    display: block;
+}

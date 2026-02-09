@@ -1,0 +1,5 @@
+# Environment Variables
+.env
+README-archived.md
+node_modules
+.DS_Store

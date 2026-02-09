@@ -1,0 +1,124 @@
+// ProductCard.module.scss
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.imageStyle {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.productColors {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.colorSwatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 5px;
+}
+
+.info {
+  padding: 10px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.unisexLabel {
+  font-size: 0.75em;
+  color: #777;
+}
+
+.productName {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.price {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.stars {
+  color: #f8d64e;
+}
+
+.reviews {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.favoriteButton {
+  margin-left: auto;
+  z-index: 1;
+}
+
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.filledStar,
+.halfStar,
+.emptyStar {
+  font-size: 20px;
+  color: #f8d64e;
+  margin-right: 2px;
+}
+
+.halfStar {
+  background: linear-gradient(to right, #f8d64e 50%, #ccc 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

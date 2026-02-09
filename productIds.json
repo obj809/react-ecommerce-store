@@ -1,0 +1,902 @@
+[
+  {
+    "id": "grJL0dokLIWdpYkwFO9d",
+    "name": "Alpine Climbing Jacket",
+    "price": 299.99,
+    "imageUrl": "https://i.imgur.com/v6Cv0bJ.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 50,
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "oFRDJsezA6vODIy4MxAG",
+    "name": "Down Insulated Vest",
+    "price": 199.99,
+    "imageUrl": "https://i.imgur.com/xDrxNDN.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 30,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "srwtVOezLY19UvEXQZa3",
+    "name": "Softshell Windbreaker",
+    "price": 149.99,
+    "imageUrl": "https://i.imgur.com/mLYhPpi.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 20,
+    "rating": 4.4,
+    "featured": false
+  },
+  {
+    "id": "rjSzFMJZtnOwo10YuIEC",
+    "name": "Waterproof Hiking Jacket",
+    "price": 250,
+    "imageUrl": "https://i.imgur.com/SvUgeGk.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 15,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "qwNdVCLpEqkeseYOvcou",
+    "name": "Thermal Fleece Vest",
+    "price": 129.99,
+    "imageUrl": "https://i.imgur.com/5B0eoFm.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 25,
+    "rating": 4.7,
+    "featured": false
+  },
+  {
+    "id": "ePnEH1Z4KgOuLjVeAZYt",
+    "name": "Convertible Hiking Jacket",
+    "price": 179.99,
+    "imageUrl": "https://i.imgur.com/Wq1TdbZ.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 30,
+    "rating": 4.8,
+    "featured": false
+  },
+  {
+    "id": "YBXwXns5xBhVJGlZmSEX",
+    "name": "Insulated Ski Jacket",
+    "price": 329.99,
+    "imageUrl": "https://i.imgur.com/PDybzA8.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 10,
+    "rating": 5,
+    "featured": true
+  },
+  {
+    "id": "dmG0YROBtvlrN6yz8uiT",
+    "name": "Lightweight Running Vest",
+    "price": 99.99,
+    "imageUrl": "https://i.imgur.com/lAfUBT2.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 50,
+    "rating": 4.6,
+    "featured": false
+  },
+  {
+    "id": "x0dxdwG31lfV7ZfVbICj",
+    "name": "Heavy Duty Work Jacket",
+    "price": 219.99,
+    "imageUrl": "https://i.imgur.com/I7yhDoo.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 20,
+    "rating": 4.5,
+    "featured": false
+  },
+  {
+    "id": "KRIIgTwKbmyiENvnFcJu",
+    "name": "Thermal Insulated Jacket",
+    "price": 89.99,
+    "imageUrl": "https://i.imgur.com/Alk8qqA.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 25,
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "qbFLPMJ0eak3YPbbYp2G",
+    "name": "Casual Quilted Jacket",
+    "price": 169.99,
+    "imageUrl": "https://i.imgur.com/kiJynME.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 35,
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "B57Am6lfDledbWWS8gST",
+    "name": "Reflective Running Vest",
+    "price": 79.99,
+    "imageUrl": "https://i.imgur.com/9s2gZ2L.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 45,
+    "rating": 4.5,
+    "featured": false
+  },
+  {
+    "id": "JajhBo95GDvAlbC5BQ6T",
+    "name": "Mountain Hardwear Jacket",
+    "price": 259.99,
+    "imageUrl": "https://i.imgur.com/dPXGe5b.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 25,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "55HSrW084w3CISa6802A",
+    "name": "Puffer Vest",
+    "price": 139.99,
+    "imageUrl": "https://i.imgur.com/60QQNGe.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 15,
+    "rating": 4.6,
+    "featured": false
+  },
+  {
+    "id": "aG69imp2dNJ9Ypu5hTcg",
+    "name": "Hiking Softshell Jacket",
+    "price": 189.99,
+    "imageUrl": "https://i.imgur.com/rKQQ2nk.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 40,
+    "rating": 4.8,
+    "featured": false
+  },
+  {
+    "id": "0UykdvimfRkcarsSNZ9s",
+    "name": "ThermoBall Vest",
+    "price": 149.99,
+    "imageUrl": "https://i.imgur.com/wZmwYxj.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 35,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "AKj3Ubjuliu4kH1gSl89",
+    "name": "Rainproof Trekking Jacket",
+    "price": 269.99,
+    "imageUrl": "https://i.imgur.com/fut03SU.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 30,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "ssB3Hdg7L7K3reLfIaQB",
+    "name": "Reflective Cycling Vest",
+    "price": 89.99,
+    "imageUrl": "https://i.imgur.com/07KEIp8.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 50,
+    "rating": 4.7,
+    "featured": false
+  },
+  {
+    "id": "nayKH5t5c3EVQLXWdW6u",
+    "name": "Winter Padded Jacket",
+    "price": 299.99,
+    "imageUrl": "https://i.imgur.com/UHeLAUj.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 20,
+    "rating": 5,
+    "featured": true
+  },
+  {
+    "id": "udKlv7kdCWgVdNq1GTDB",
+    "name": "Ultra Lightweight Vest",
+    "price": 119.99,
+    "imageUrl": "https://i.imgur.com/n2WeMIS.png",
+    "category": "Jackets & Vests",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 40,
+    "rating": 4.8,
+    "featured": false
+  },
+  {
+    "id": "8GYWcKMCWANoD1cEfE4r",
+    "name": "Base Layer Top",
+    "price": 49.99,
+    "imageUrl": "https://i.imgur.com/ydOtf4V.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 50,
+    "rating": 4.7,
+    "featured": true
+  },
+  {
+    "id": "9ZHVhrDoAwpyCTWzAPBR",
+    "name": "Thermal Henley",
+    "price": 39.99,
+    "imageUrl": "https://i.imgur.com/Ef9bDvb.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 30,
+    "rating": 4.6,
+    "featured": false
+  },
+  {
+    "id": "nZIZC5gaIfMRcgToNBU0",
+    "name": "Moisture-Wicking Shirt",
+    "price": 29.99,
+    "imageUrl": "https://i.imgur.com/grr9rSl.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 20,
+    "rating": 4.5,
+    "featured": false
+  },
+  {
+    "id": "s439dSiL3I8EJenQGXhq",
+    "name": "Breathable Running Top",
+    "price": 59.99,
+    "imageUrl": "https://i.imgur.com/wWetcrU.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 15,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "wtRoedUAwYtGY8OGBrGI",
+    "name": "Cotton Crewneck",
+    "price": 19.99,
+    "imageUrl": "https://i.imgur.com/FrFWiFO.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 25,
+    "rating": 4.4,
+    "featured": false
+  },
+  {
+    "id": "idEn52X9ZOD6HC8fSzW8",
+    "name": "Long-Sleeve Hiking Shirt",
+    "price": 69.99,
+    "imageUrl": "https://i.imgur.com/a02hdDL.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 30,
+    "rating": 4.7,
+    "featured": false
+  },
+  {
+    "id": "NQlCsgFAeZLDnMaHIvUQ",
+    "name": "Performance Polo",
+    "price": 49.99,
+    "imageUrl": "https://i.imgur.com/Cxe0IxF.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 10,
+    "rating": 4.3,
+    "featured": false
+  },
+  {
+    "id": "U03nD71lgridE1o13EuT",
+    "name": "Flannel Shirt",
+    "price": 59.99,
+    "imageUrl": "https://i.imgur.com/CiDiZ3C.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 50,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "CftRqB6OscL69YAELDnI",
+    "name": "Casual Short-Sleeve T-Shirt",
+    "price": 24.99,
+    "imageUrl": "https://i.imgur.com/RNewQf9.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 30,
+    "rating": 4.7,
+    "featured": true
+  },
+  {
+    "id": "IqvqwYuIhNpfjgZpypKA",
+    "name": "Zip-Up Hoodie",
+    "price": 79.99,
+    "imageUrl": "https://i.imgur.com/Emlezx5.png",
+    "category": "Tops",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 40,
+    "rating": 5,
+    "featured": true
+  },
+  {
+    "id": "b7pJvNgvAGWGLWCwGVmx",
+    "name": "Waterproof Hiking Pants",
+    "price": 89.99,
+    "imageUrl": "https://i.imgur.com/6jwjWxD.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 50,
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "aGcfwegXrCqIjRzri8UH",
+    "name": "Convertible Cargo Pants",
+    "price": 79.99,
+    "imageUrl": "https://i.imgur.com/ZmClaGa.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 30,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "Ab2FgQnjdBSp5ojc9Edb",
+    "name": "Running Shorts",
+    "price": 49.99,
+    "imageUrl": "https://i.imgur.com/B25Adkc.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 20,
+    "rating": 4.6,
+    "featured": false
+  },
+  {
+    "id": "q6ezTShes84hDSQu33iF",
+    "name": "Insulated Snow Pants",
+    "price": 149.99,
+    "imageUrl": "https://i.imgur.com/XucV1TV.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 15,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "2uKuSF2b77JYfLEyh9L0",
+    "name": "Fleece Joggers",
+    "price": 59.99,
+    "imageUrl": "https://i.imgur.com/SlxlCaQ.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 25,
+    "rating": 4.5,
+    "featured": false
+  },
+  {
+    "id": "9ArlAhSKZnMXbRAHeGHV",
+    "name": "Climbing Pants",
+    "price": 109.99,
+    "imageUrl": "https://i.imgur.com/CzpBbON.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 30,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "W997n8oorlrW07KQtuCJ",
+    "name": "Breathable Mesh Shorts",
+    "price": 29.99,
+    "imageUrl": "https://i.imgur.com/aY0LRQZ.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "S",
+    "quantity": 10,
+    "rating": 4.3,
+    "featured": false
+  },
+  {
+    "id": "bUhvOmaxUJwJqdUndQPI",
+    "name": "Water-Resistant Leggings",
+    "price": 79.99,
+    "imageUrl": "https://i.imgur.com/MzPhdit.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "XL",
+    "quantity": 50,
+    "rating": 5,
+    "featured": true
+  },
+  {
+    "id": "XVDQs4cuLCkqXRmYjQO2",
+    "name": "Cargo Shorts",
+    "price": 39.99,
+    "imageUrl": "https://i.imgur.com/Gd5O8rh.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 20,
+    "rating": 4.5,
+    "featured": false
+  },
+  {
+    "id": "nMHc0J1TGS01XfCVFX4x",
+    "name": "Convertible Hiking Pants",
+    "price": 89.99,
+    "imageUrl": "https://i.imgur.com/RqzlWGl.png",
+    "category": "Bottoms",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 40,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "QrwjMlvRLqmW17Rq2mg4",
+    "name": "Climbing Helmet",
+    "price": 89.99,
+    "imageUrl": "https://i.imgur.com/d23gBEA.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 50,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "e7EVUpdDY2Ee4gKSJdbx",
+    "name": "Climbing Harness",
+    "price": 119.99,
+    "imageUrl": "https://i.imgur.com/vh6QjbI.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 30,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "yx6ei481bCHzONCrMYPU",
+    "name": "Climbing Rope",
+    "price": 199.99,
+    "imageUrl": "https://i.imgur.com/D4Uogte.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 20,
+    "rating": 5,
+    "featured": false
+  },
+  {
+    "id": "HafZCfaZ1PZiCbz3NkqX",
+    "name": "Carabiners",
+    "price": 24.99,
+    "imageUrl": "https://i.imgur.com/GZyNEGe.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 100,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "idJSz8Fa7o4vHpwEMTni",
+    "name": "Quickdraws",
+    "price": 29.99,
+    "imageUrl": "https://i.imgur.com/KCsZ0fZ.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 80,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "iPEXEQBIT3cszybnoY3A",
+    "name": "Belay Device",
+    "price": 49.99,
+    "imageUrl": "https://i.imgur.com/6ZSqTEq.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 40,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "FKiwIEwejFbhjC45hZlz",
+    "name": "Ice Axe",
+    "price": 149.99,
+    "imageUrl": "https://i.imgur.com/gvFI1St.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 30,
+    "rating": 5,
+    "featured": false
+  },
+  {
+    "id": "56dVH6hwDWYD8Tid96IA",
+    "name": "Lightweight Snowshoes",
+    "price": 119.99,
+    "imageUrl": "https://i.imgur.com/Hbig9wK.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 40,
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "yaskAUuYtzUnZtniS5Sl",
+    "name": "Mountaineering Boots",
+    "price": 249.99,
+    "imageUrl": "https://i.imgur.com/dhaQopH.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 20,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "z58XUhKF2pnecD5x4cT8",
+    "name": "All-Terrain Hiking Boots",
+    "price": 99.99,
+    "imageUrl": "https://i.imgur.com/hLijIL1.png",
+    "category": "Equipment",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "Multiple Sizes",
+    "quantity": 35,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "6W4ZB0lvcSvGY1pDoYgy",
+    "name": "Wool Beanie",
+    "price": 19.99,
+    "imageUrl": "https://i.imgur.com/jbznfS9.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 100,
+    "rating": 4.8,
+    "featured": false
+  },
+  {
+    "id": "iHRgXCsrPkdEJpIh1Fnw",
+    "name": "Thermal Gloves",
+    "price": 29.99,
+    "imageUrl": "https://i.imgur.com/Jow4c0L.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 80,
+    "rating": 4.8,
+    "featured": false
+  },
+  {
+    "id": "ENbm0IMjiNCa5RNKA1Xp",
+    "name": "Neck Gaiter",
+    "price": 14.99,
+    "imageUrl": "https://i.imgur.com/DJZNyrL.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 120,
+    "rating": 4.7,
+    "featured": false
+  },
+  {
+    "id": "PJPZLs1cs6RbInZUNtCV",
+    "name": "Wool Socks",
+    "price": 19.99,
+    "imageUrl": "https://i.imgur.com/ExSQVG8.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 150,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "BvLJHmh19RG2HTq3PChe",
+    "name": "Hiking Gaiters",
+    "price": 29.99,
+    "imageUrl": "https://i.imgur.com/MhW8udv.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 60,
+    "rating": 4.8,
+    "featured": true
+  },
+  {
+    "id": "MfND2Ze1IYgi5opV41Nq",
+    "name": "Sunglasses",
+    "price": 49.99,
+    "imageUrl": "https://i.imgur.com/DAguM72.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 70,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "bKwowwoTLPxbSuDpJwNn",
+    "name": "Baseball Cap",
+    "price": 24.99,
+    "imageUrl": "https://i.imgur.com/GwfYTwB.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "M",
+    "quantity": 90,
+    "rating": 4.7,
+    "featured": false
+  },
+  {
+    "id": "WPBoJLJnznv5l7gHG2da",
+    "name": "Insulated Gloves",
+    "price": 39.99,
+    "imageUrl": "https://i.imgur.com/6danKYM.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "L",
+    "quantity": 50,
+    "rating": 4.9,
+    "featured": true
+  },
+  {
+    "id": "eILW0YeXiUj1JlhYMzDB",
+    "name": "Hiking Backpack",
+    "price": 99.99,
+    "imageUrl": "https://i.imgur.com/Nv1xCUn.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 30,
+    "rating": 4.9,
+    "featured": false
+  },
+  {
+    "id": "s5i9V2XqDpXW4kIARDtL",
+    "name": "Hiking Poles",
+    "price": 59.99,
+    "imageUrl": "https://i.imgur.com/iH05Upx.png",
+    "category": "Accessories",
+    "colors": [
+      "#FFFFFF",
+      "#000000"
+    ],
+    "size": "One Size",
+    "quantity": 40,
+    "rating": 5,
+    "featured": false
+  }
+]

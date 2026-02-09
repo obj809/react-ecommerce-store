@@ -1,0 +1,100 @@
+// SingleProduct.module.scss
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 160px);
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.productBox {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.imageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.textCard {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.newPrice {
+    font-size: 1.5em;
+    color: #e60023;
+    margin-bottom: 20px;
+}
+
+.sizeOptions {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.sizeSelect {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.backButton {
+    background-color: black;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 225px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: #333;
+    }
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}

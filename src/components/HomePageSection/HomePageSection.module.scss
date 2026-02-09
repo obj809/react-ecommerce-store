@@ -1,0 +1,65 @@
+/* HomePageSection.module.scss */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+  
+  .buttonContainer.top-left {
+    top: 25%;
+    left: 10%;
+  }
+  
+  .buttonContainer.top-right {
+    top: 40%;
+    right: 20%;
+  }
+  
+  .buttonContainer.bottom-left {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .buttonContainer.bottom-right {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .buttonContainer.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border: 2px solid white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
+  
+    &:hover {
+      background-color: white;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+  }
+  

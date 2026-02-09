@@ -1,0 +1,25 @@
+/* EquipmentPage.module.scss */
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: calc(100vh - 160px);
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.productsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.productsGrid p {
+  flex: 1 100%;
+}

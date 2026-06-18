@@ -5,7 +5,7 @@
 An e-commerce store for alpine clothing and equipment with dynamic functionality. Built with React, Google Firestore, React Router, and SCSS, with Stripe checkout (test mode) handled by Netlify serverless functions. Product imagery is generated with Midjourney AI.
 
 ## Deployment Link
-This e-shop is live! Check it out [here](https://react-ecommerce-store-project.netlify.app/).
+This e-shop is live! Check it out [here](https://summit-shop.netlify.app/).
 
 ## Screenshot
 ![E-shop Homepage](public/summit-shop-project-screenshot.png)

@@ -8,6 +8,7 @@ import {
   getDoc,
   getDocs,
   onSnapshot,
+  runTransaction,
   updateDoc,
   setDoc,
 } from "firebase/firestore";
@@ -168,6 +169,52 @@ export const incrementProductQuantity = async (productId) => {
       console.log("Product does not exist");
       throw new Error("Product does not exist");
   }
+};
+
+
+// Submits a user's star rating (1–5) and returns the new running average.
+// Tracks ratingSum + ratingCount on the product and keeps the denormalized
+// `rating` field as the average, so all existing display code keeps working.
+// Runs in a transaction so concurrent votes don't clobber each other. Products
+// that predate this (no ratingCount) seed their existing `rating` as one vote
+// so the preassigned value isn't lost on the first real vote.
+export const submitProductRating = async (productId, value) => {
+  const productRef = doc(db, "products", productId);
+
+  return await runTransaction(db, async (transaction) => {
+    const snapshot = await transaction.get(productRef);
+    if (!snapshot.exists()) {
+      throw new Error("Product does not exist");
+    }
+
+    const data = snapshot.data();
+    const tracked = typeof data.ratingCount === "number";
+    const count = tracked
+      ? data.ratingCount
+      : typeof data.rating === "number"
+        ? 1
+        : 0;
+    const sum = tracked
+      ? data.ratingSum
+      : typeof data.rating === "number"
+        ? data.rating
+        : 0;
+
+    const newCount = count + 1;
+    const newSum = sum + value;
+    const newRating = newSum / newCount;
+
+    transaction.update(productRef, {
+      ratingSum: newSum,
+      ratingCount: newCount,
+      rating: newRating,
+    });
+
+    console.log(
+      `Rating submitted for ${productId}: ${newRating.toFixed(2)} avg over ${newCount} votes`
+    );
+    return { rating: newRating, ratingCount: newCount };
+  });
 };
 
 

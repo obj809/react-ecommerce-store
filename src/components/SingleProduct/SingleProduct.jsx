@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './SingleProduct.module.scss';
 import ProductImageWithFavorite from '../ProductImageWithFavorite/ProductImageWithFavorite';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
+import StarRating from '../StarRating/StarRating';
 
 const SingleProduct = ({ product, onFavoriteToggle }) => {
     const navigate = useNavigate();
@@ -43,6 +44,7 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
                 </div>
                 <div className={styles.textCard}>
                     <h2>{name}</h2>
+                    <StarRating rating={product.rating} productId={product.id} editable />
                     <p className={styles.newPrice}>${price.toFixed(2)}</p>
                     <div className={styles.sizeOptions}>
                         <label htmlFor="sizes">Size: </label>

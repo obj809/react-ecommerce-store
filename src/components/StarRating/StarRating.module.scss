@@ -1,0 +1,34 @@
+/* StarRating.module.scss */
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.editable {
+  cursor: pointer;
+}
+
+.filledStar,
+.halfStar,
+.emptyStar {
+  font-size: 20px;
+  color: #f8d64e;
+  margin-right: 2px;
+}
+
+/* Half star: the span itself renders a gold outline ☆ (same as empty stars);
+   the overlaid fill is a solid ★ clipped to the left half. */
+.halfStar {
+  position: relative;
+  display: inline-block;
+}
+
+.halfStarFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f8d64e;
+}

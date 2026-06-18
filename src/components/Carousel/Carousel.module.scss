@@ -41,17 +41,24 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    background-color: #fff;
+    background-color: transparent;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 16px;
     cursor: pointer;
-    color: black;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .button:first-child {
-    left: 0;
+    left: 8px;
 }
 
 .button:last-child {
-    right: 0;
+    right: 8px;
 }

@@ -53,7 +53,7 @@ const CartPage = () => {
                             ))}
                         </div>
                         <div className={styles.rightSide}>
-                            <OrderSummary subtotal={subtotal} itemCount={itemCount} />
+                            <OrderSummary subtotal={subtotal} itemCount={itemCount} cartItems={cartItems} />
                         </div>
                     </div>
                 )}

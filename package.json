@@ -18,10 +18,12 @@
     "debug": "^4.3.6",
     "dotenv": "^16.4.5",
     "firebase": "^11.1.0",
+    "firebase-admin": "^13.0.2",
     "fullpage.js": "^4.0.22",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "stripe": "^17.5.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.6",

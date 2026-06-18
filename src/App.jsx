@@ -14,6 +14,7 @@ import BottomsPage from './pages/BottomsPage/BottomsPage';
 import AccessoriesPage from './pages/AccessoriesPage/AccessoriesPage';
 import EquipmentPage from './pages/EquipmentPage/EquipmentPage';
 import SearchResultsPage from './pages/SearchResultsPage/SearchResultsPage';
+import CheckoutSuccessPage from './pages/CheckoutSuccessPage/CheckoutSuccessPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.module.scss';
 import Footer from './components/Footer/Footer';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/accessories" element={<AccessoriesPage />} />
           <Route path="/equipment" element={<EquipmentPage />} />
           <Route path="/search" element={<SearchResultsPage />} />
+          <Route path="/checkout/success" element={<CheckoutSuccessPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>

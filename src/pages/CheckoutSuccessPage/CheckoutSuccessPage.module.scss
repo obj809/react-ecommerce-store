@@ -1,0 +1,55 @@
+/* CheckoutSuccessPage.module.scss */
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 160px);
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+    padding: 40px 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darkred;
+        color: white;
+    }
+}

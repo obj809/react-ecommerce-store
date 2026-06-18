@@ -171,6 +171,28 @@ export const incrementProductQuantity = async (productId) => {
 };
 
 
+// Calls the Netlify function that creates a Stripe Checkout Session and returns
+// its hosted URL. Only ids + quantities are sent — the function re-reads prices
+// from Firestore server-side, so the browser's amounts are never trusted.
+export const createCheckoutSession = async (items) => {
+  const payload = items.map(({ id, quantityInCart }) => ({ id, quantityInCart }));
+
+  const response = await fetch("/.netlify/functions/create-checkout-session", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ items: payload }),
+  });
+
+  if (!response.ok) {
+    const { error } = await response.json().catch(() => ({}));
+    throw new Error(error || "Failed to create checkout session");
+  }
+
+  const { url } = await response.json();
+  return url;
+};
+
+
 export const removeAllFromCartAndRestore = async (productId) => {
   const cartRef = doc(db, "cart", productId);
   const productRef = doc(db, "products", productId);

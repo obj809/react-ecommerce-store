@@ -38,6 +38,13 @@
     gap: 10px;
 }
 
+.error {
+    color: #b00020;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .checkoutButton {
     background-color: red;
     color: white;
@@ -53,6 +60,11 @@
 
     &:hover {
         background-color: darkred;
+    }
+
+    &:disabled {
+        background-color: #999;
+        cursor: not-allowed;
     }
 }
 

@@ -43,9 +43,13 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
                     <ProductImageWithFavorite product={product} onFavoriteToggle={onFavoriteToggle} />
                 </div>
                 <div className={styles.textCard}>
-                    <h2>{name}</h2>
+                    {product.category && <p className={styles.category}>{product.category}</p>}
+                    <h2 className={styles.productName}>{name}</h2>
                     <StarRating rating={product.rating} productId={product.id} editable />
                     <p className={styles.newPrice}>${price.toFixed(2)}</p>
+                    <p className={quantityState > 0 ? styles.availability : styles.outOfStock}>
+                        {quantityState > 0 ? `In Stock — ${quantityState} available` : 'Out of Stock'}
+                    </p>
                     <div className={styles.sizeOptions}>
                         <label htmlFor="sizes">Size: </label>
                         <select
@@ -60,9 +64,6 @@ const SingleProduct = ({ product, onFavoriteToggle }) => {
                                 </option>
                             ))}
                         </select>
-                    </div>
-                    <div className={styles.quantity}>
-                        <p>Quantity: {quantityState}</p>
                     </div>
                     <div className={styles.buttonGroup}>
                         <button onClick={handleBackToProducts} className={styles.backButton}>

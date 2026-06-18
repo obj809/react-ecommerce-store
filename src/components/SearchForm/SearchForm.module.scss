@@ -41,3 +41,9 @@
 .iconButton:hover {
   color: #555;
 }
+
+/* The xmark glyph reads slightly smaller than the magnifying glass at the
+   same size, so nudge it up to match visually. */
+.closeIcon {
+  font-size: 1.15em;
+}

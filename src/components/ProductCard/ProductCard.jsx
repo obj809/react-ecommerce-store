@@ -20,13 +20,12 @@ const ProductCard = ({ product, onFavoriteToggle }) => {
           </div>
         </Link>
       </div>
-      <div className={styles.header}></div>
       <div className={styles.info}>
         <div className={styles.labels}>
           <p className={styles.unisexLabel}>UNISEX</p>
         </div>
         <h4 className={styles.productName}>{product.name}</h4>
-        <p className={styles.price}>${product.price}</p>
+        <p className={styles.price}>${Number(product.price).toFixed(2)}</p>
         <div className={styles.rating}>
           <StarRating rating={product.rating} productId={product.id} editable />
           <FavoriteButton product={product} onFavoriteToggle={onFavoriteToggle} className={styles.favoriteButton} />

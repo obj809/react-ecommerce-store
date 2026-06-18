@@ -265,6 +265,44 @@ export const createCheckoutSession = async (items) => {
 };
 
 
+// Sets a cart item to an absolute quantity, keeping product stock in sync.
+// Compares the requested increase against the product's CURRENT available
+// stock and refuses if there isn't enough. Runs in a transaction so stock and
+// cart stay consistent. Returns the new stock + cart quantities.
+export const setCartItemQuantity = async (productId, newCartQuantity) => {
+  const productRef = doc(db, "products", productId);
+  const cartRef = doc(db, "cart", productId);
+
+  return await runTransaction(db, async (transaction) => {
+    const productSnap = await transaction.get(productRef);
+    const cartSnap = await transaction.get(cartRef);
+    if (!productSnap.exists() || !cartSnap.exists()) {
+      throw new Error("Product or cart item does not exist");
+    }
+
+    const currentStock = productSnap.data().quantity;
+    const currentCartQuantity = cartSnap.data().quantity;
+    const delta = newCartQuantity - currentCartQuantity;
+
+    // Only an increase consumes stock; compare it against what's available.
+    if (delta > currentStock) {
+      throw new Error(
+        `Only ${currentStock} more in stock for this item.`
+      );
+    }
+
+    const newStock = currentStock - delta;
+    transaction.update(productRef, { quantity: newStock });
+    transaction.update(cartRef, { quantity: newCartQuantity });
+
+    console.log(
+      `Cart quantity set to ${newCartQuantity}; stock now ${newStock}`
+    );
+    return { newProductQuantity: newStock, newCartQuantity };
+  });
+};
+
+
 export const removeAllFromCartAndRestore = async (productId) => {
   const cartRef = doc(db, "cart", productId);
   const productRef = doc(db, "products", productId);

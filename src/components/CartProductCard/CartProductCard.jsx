@@ -7,8 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import StarRating from '../StarRating/StarRating';
 import {
-    incrementQuantityInCart, decrementProductQuantity, decrementQuantityInCart,
-    incrementProductQuantity, removeAllFromCartAndRestore
+    setCartItemQuantity, removeAllFromCartAndRestore
 } from '../../services/firebase-service';
 
 const CartProductCard = ({ product, onUpdate }) => {
@@ -17,23 +16,16 @@ const CartProductCard = ({ product, onUpdate }) => {
     const handleCardClick = () => {
         navigate(`/products/${product.id}`);
     };
-    const handleIncrement = async () => {
-        try {
-            const newTotalQuantity = await decrementProductQuantity(product.id);
-            const newCartQuantity = await incrementQuantityInCart(product.id);
-            onUpdate(product.id, newCartQuantity, newTotalQuantity);
-        } catch (error) {
-            alert("Error updating quantities: " + error.message);
-        }
-    };
 
-    const handleDecrement = async () => {
+    const handleQuantityChange = async (e) => {
+        const newQuantity = Number(e.target.value);
         try {
-            const newTotalQuantity = await incrementProductQuantity(product.id);
-            const newCartQuantity = await decrementQuantityInCart(product.id);
-            onUpdate(product.id, newCartQuantity, newTotalQuantity);
+            const { newProductQuantity, newCartQuantity } = await setCartItemQuantity(product.id, newQuantity);
+            onUpdate(product.id, newCartQuantity, newProductQuantity);
         } catch (error) {
-            alert("Error updating quantities: " + error.message);
+            // The select is controlled by product.quantityInCart, so leaving
+            // state unchanged snaps it back to the previous value.
+            alert(error.message);
         }
     };
 
@@ -75,7 +67,7 @@ const CartProductCard = ({ product, onUpdate }) => {
                 <div className={styles.footerRow}>
                     <div className={styles.quantityContainer} onClick={(e) => e.stopPropagation()}>
                         <label className={styles.quantityLabel} htmlFor={`qty-${product.id}`}>Quantity</label>
-                        <select id={`qty-${product.id}`} className={styles.quantitySelect} value={product.quantityInCart} onChange={(e) => onUpdate(product.id, e.target.value)}>
+                        <select id={`qty-${product.id}`} className={styles.quantitySelect} value={product.quantityInCart} onChange={handleQuantityChange}>
                             {[...Array(10).keys()].map(i => (
                                 <option key={i} value={i + 1}>{i + 1}</option>
                             ))}

@@ -11,6 +11,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   font-family: Arial, sans-serif;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .imageWrapper {
@@ -32,29 +37,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
   }
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-
-.productColors {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
-}
-
-.colorSwatch {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  margin: 0 5px;
+.card:hover .imageStyle img {
+  transform: scale(1.05);
 }
 
 .info {
@@ -89,36 +77,7 @@
   gap: 5px;
 }
 
-.stars {
-  color: #f8d64e;
-}
-
-.reviews {
-  font-size: 0.9em;
-  color: #777;
-}
-
 .favoriteButton {
   margin-left: auto;
   z-index: 1;
-}
-
-
-.stars {
-  display: flex;
-  align-items: center;
-}
-
-.filledStar,
-.halfStar,
-.emptyStar {
-  font-size: 20px;
-  color: #f8d64e;
-  margin-right: 2px;
-}
-
-.halfStar {
-  background: linear-gradient(to right, #f8d64e 50%, #ccc 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }

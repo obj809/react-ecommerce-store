@@ -25,6 +25,31 @@ import { db } from "../config/firestore.js";
   };
 
 
+// Live count of favorited products. Calls `callback(count)` immediately and on
+// every change. Returns the onSnapshot unsubscribe function.
+export const subscribeToFavoritesCount = (callback) => {
+  const productsRef = collection(db, "products");
+  return onSnapshot(productsRef, (snapshot) => {
+    const count = snapshot.docs.filter((doc) => doc.data().favorited).length;
+    callback(count);
+  });
+};
+
+
+// Live total number of items in the cart (sum of cart quantities). Calls
+// `callback(count)` immediately and on every change; returns the unsubscribe.
+export const subscribeToCartCount = (callback) => {
+  const cartRef = collection(db, "cart");
+  return onSnapshot(cartRef, (snapshot) => {
+    const total = snapshot.docs.reduce(
+      (sum, doc) => sum + (doc.data().quantity || 0),
+      0
+    );
+    callback(total);
+  });
+};
+
+
 
   export const getProductById = async (id) => {
   

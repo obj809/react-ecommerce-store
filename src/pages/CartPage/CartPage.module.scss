@@ -31,9 +31,10 @@
     width: 100%;
     text-align: start;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
@@ -49,16 +50,27 @@
 }
 
 .shopButton {
+    margin-top: 10px;
     padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
     font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darkred;
+    }
 }
 
 .populatedContainer {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 10px;
 }
 
@@ -71,9 +83,10 @@
 
 .rightSide {
     width: 28%;
-    position: sticky;
-    top: 20px;
-    align-self: flex-start;
+    /* Stretch to match the cards' column height (align-items: stretch on the
+       parent). This trades away the previous sticky-scroll behavior. */
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

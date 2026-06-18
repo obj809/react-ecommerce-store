@@ -2,21 +2,29 @@
 
 .card {
   display: flex;
+  gap: 28px;
   width: 100%;
-  padding: 20px;
+  padding: 24px;
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  margin-bottom: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 .imageWrapper {
+  flex: 0 0 225px;
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 225px;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .favoriteButton {
@@ -36,44 +44,64 @@
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0 20px;
+  gap: 12px;
   flex: 1;
 }
 
 .productName {
-  font-size: 1.25em;
+  font-size: 24px;
   font-weight: bold;
-  margin: 0.5em 0;
+  color: #222;
+  margin: 0;
+}
+
+.productDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+  font-size: 16px;
+  color: #777;
 }
 
 .size,
 .availability {
-  font-size: 1em;
+  font-size: 16px;
   color: #555;
-  margin: 0.25em 0;
+  margin: 0;
+}
+
+.outOfStock {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d9534f;
+  margin: 0;
 }
 
 .priceSection {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 4px;
 
   .discountedPrice {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
-    color: red;
+    color: #d9534f;
+    margin: 0;
   }
 
   .originalPrice {
     text-decoration: line-through;
     color: #888;
+    margin: 0;
   }
 
   .price {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
     color: #333;
+    margin: 0;
   }
 }
 

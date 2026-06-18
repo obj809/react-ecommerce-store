@@ -2,90 +2,137 @@
 
 .card {
   display: flex;
-  gap: 20px;
+  gap: 28px;
   width: 100%;
   max-width: 1300px;
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 24px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: relative;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 .imageContainer {
-  flex: 0 0 150px;
+  flex: 0 0 225px;
 }
 
 .image {
-  width: 100%;
-  height: auto;
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 
 .info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .productName {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
+  color: #222;
+  margin: 0;
+  padding-right: 32px; /* keep clear of the remove button */
 }
 
-.productId,
-.productDetails,
-.productAvailability,
-.productOffer,
-.productPrice,
-.subtotal {
+.productDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   margin: 0;
+  font-size: 16px;
+  color: #777;
+}
+
+.availability {
+  font-size: 16px;
   color: #555;
+  margin: 0;
+}
+
+.outOfStock {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d9534f;
+  margin: 0;
 }
 
 .productPrice {
-  font-size: 20px;
-  color: #d9534f;
+  margin: 4px 0 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #333;
 }
 
-.productOffer {
-  color: #d9534f;
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
 }
 
 .quantityContainer {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .quantityLabel {
-  font-size: 16px;
+  font-size: 14px;
+  color: #555;
 }
 
 .quantitySelect {
-  padding: 5px;
+  padding: 5px 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .subtotal {
+  margin: 0;
   font-size: 18px;
   font-weight: bold;
+  color: #222;
 }
 
 .removeButton {
   position: absolute;
   top: 10px;
   right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
   background-color: transparent;
   border: none;
-  color: #d9534f;
-  font-size: 20px;
+  border-radius: 50%;
+  color: #999;
+  font-size: 16px;
+  line-height: 1;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .removeButton:hover {
+  background-color: #f2f2f2;
   color: #c9302c;
 }

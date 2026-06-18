@@ -1,8 +1,13 @@
 /* OrderSummary.module.scss */
 
 .orderSummary {
+    /* Fills the .rightSide wrapper, which flex-stretches to match the cart
+       cards' column height (see CartPage .populatedContainer / .rightSide). */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 24px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -11,19 +16,24 @@
 .summaryHeader {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
+    align-items: baseline;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .summaryDetails {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     margin-top: 20px;
 }
 
 .detailRow {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 18px;
 }
 
 .deliveryInfo {
@@ -36,6 +46,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: auto;
+    padding-top: 16px;
 }
 
 .error {

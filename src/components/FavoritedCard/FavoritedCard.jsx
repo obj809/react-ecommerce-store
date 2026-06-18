@@ -3,6 +3,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProductImageWithFavorite from '../ProductImageWithFavorite/ProductImageWithFavorite';
+import StarRating from '../StarRating/StarRating';
 import styles from './FavoritedCard.module.scss';
 
 const FavoritedCard = ({ product, onFavoriteToggle }) => {
@@ -23,16 +24,24 @@ const FavoritedCard = ({ product, onFavoriteToggle }) => {
       </div>
       <div className={styles.info}>
         <h4 className={styles.productName}>{product.name}</h4>
-        <p className={styles.size}>Size: {product.size}</p>
-        <p className={styles.availability}>{product.quantity > 0 ? 'In Stock' : 'Out of Stock'}</p>
+        {(product.category || product.size) && (
+          <div className={styles.productDetails}>
+            {product.category && <span>{product.category}</span>}
+            {product.size && <span>Size: {product.size}</span>}
+          </div>
+        )}
+        <StarRating rating={product.rating} />
+        <p className={product.quantity > 0 ? styles.availability : styles.outOfStock}>
+          {product.quantity > 0 ? 'In Stock' : 'Out of Stock'}
+        </p>
         <div className={styles.priceSection}>
           {product.discountedPrice ? (
             <>
-              <p className={styles.discountedPrice}>${product.discountedPrice}</p>
-              <p className={styles.originalPrice}>${product.originalPrice}</p>
+              <p className={styles.discountedPrice}>${Number(product.discountedPrice).toFixed(2)}</p>
+              <p className={styles.originalPrice}>${Number(product.originalPrice).toFixed(2)}</p>
             </>
           ) : (
-            <p className={styles.price}>${product.price}</p>
+            <p className={styles.price}>${Number(product.price).toFixed(2)}</p>
           )}
         </div>
         {product.offer && (

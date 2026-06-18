@@ -11,6 +11,7 @@ import styles from './FavoriteButton.module.scss';
 
 const FavoriteButton = ({ product, onFavoriteToggle }) => {
     const [isToggled, setIsToggled] = useState(product.favorited);
+    const [animate, setAnimate] = useState(false);
 
     useEffect(() => {
         const docRef = doc(db, "products", product.id);
@@ -24,6 +25,9 @@ const FavoriteButton = ({ product, onFavoriteToggle }) => {
     }, [product.id]);
 
     const toggle = async () => {
+        // Trigger the pop immediately so it feels responsive to the click,
+        // before awaiting the Firestore write.
+        setAnimate(true);
         const newFavorited = !isToggled;
         const docRef = doc(db, "products", product.id);
         await updateDoc(docRef, { favorited: newFavorited });
@@ -33,7 +37,12 @@ const FavoriteButton = ({ product, onFavoriteToggle }) => {
 
     return (
         <button onClick={toggle} className={`btn ${styles.button} ${isToggled ? styles.toggled : ''}`}>
-            <FontAwesomeIcon icon={isToggled ? solidHeart : regularHeart} className="fa-2x" />
+            <span
+                className={`${styles.iconWrapper} ${animate ? styles.pop : ''}`}
+                onAnimationEnd={() => setAnimate(false)}
+            >
+                <FontAwesomeIcon icon={isToggled ? solidHeart : regularHeart} className="fa-2x" />
+            </span>
         </button>
     );
 };

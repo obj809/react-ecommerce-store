@@ -1,14 +1,22 @@
 // CardProductCard.jsx
 
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import styles from './CartProductCard.module.scss';
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import StarRating from '../StarRating/StarRating';
 import {
-    incrementQuantityInCart, decrementProductQuantity, decrementQuantityInCart, 
+    incrementQuantityInCart, decrementProductQuantity, decrementQuantityInCart,
     incrementProductQuantity, removeAllFromCartAndRestore
 } from '../../services/firebase-service';
 
 const CartProductCard = ({ product, onUpdate }) => {
+    const navigate = useNavigate();
+
+    const handleCardClick = () => {
+        navigate(`/products/${product.id}`);
+    };
     const handleIncrement = async () => {
         try {
             const newTotalQuantity = await decrementProductQuantity(product.id);
@@ -39,25 +47,42 @@ const CartProductCard = ({ product, onUpdate }) => {
     };
 
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={handleCardClick}>
             <div className={styles.imageContainer}>
                 <img src={product.imageUrl} alt={product.name} className={styles.image}/>
             </div>
             <div className={styles.info}>
+                <button
+                    onClick={(e) => { e.stopPropagation(); handleRemoveAll(); }}
+                    className={styles.removeButton}
+                    aria-label="Remove item"
+                    title="Remove item"
+                >
+                    <FontAwesomeIcon icon={faXmark} />
+                </button>
                 <h2 className={styles.productName}>{product.name}</h2>
-                <p className={styles.productDetails}>Colour: {product.colour}</p>
-                <p className={styles.productDetails}>Size: {product.size}</p>
-                <p className={styles.productPrice}>${product.price}</p>
-                <div className={styles.quantityContainer}>
-                    <p className={styles.quantityLabel}>Quantity:</p>
-                    <select className={styles.quantitySelect} value={product.quantityInCart} onChange={(e) => onUpdate(product.id, e.target.value)}>
-                        {[...Array(10).keys()].map(i => (
-                            <option key={i} value={i + 1}>{i + 1}</option>
-                        ))}
-                    </select>
+                {(product.category || product.size) && (
+                    <div className={styles.productDetails}>
+                        {product.category && <span>{product.category}</span>}
+                        {product.size && <span>Size: {product.size}</span>}
+                    </div>
+                )}
+                <StarRating rating={product.rating} />
+                <p className={product.quantity > 0 ? styles.availability : styles.outOfStock}>
+                    {product.quantity > 0 ? 'In Stock' : 'Out of Stock'}
+                </p>
+                <p className={styles.productPrice}>${Number(product.price).toFixed(2)}</p>
+                <div className={styles.footerRow}>
+                    <div className={styles.quantityContainer} onClick={(e) => e.stopPropagation()}>
+                        <label className={styles.quantityLabel} htmlFor={`qty-${product.id}`}>Quantity</label>
+                        <select id={`qty-${product.id}`} className={styles.quantitySelect} value={product.quantityInCart} onChange={(e) => onUpdate(product.id, e.target.value)}>
+                            {[...Array(10).keys()].map(i => (
+                                <option key={i} value={i + 1}>{i + 1}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <p className={styles.subtotal}>Subtotal: ${(product.price * product.quantityInCart).toFixed(2)}</p>
                 </div>
-                <p className={styles.subtotal}>Subtotal: ${product.price * product.quantityInCart}</p>
-                <button onClick={handleRemoveAll} className={styles.removeButton}>X</button>
             </div>
         </div>
     );

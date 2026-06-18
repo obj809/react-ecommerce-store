@@ -8,7 +8,7 @@ An e-commerce store for alpine clothing and equipment with dynamic functionality
 This e-shop is live! Check it out [here](https://summit-shop.netlify.app/).
 
 ## Screenshot
-![E-shop Homepage](public/summit-shop-project-screenshot.png)
+![E-shop Homepage](public/summit-shop-screenshot.png)
 
 
 ## Table of Contents

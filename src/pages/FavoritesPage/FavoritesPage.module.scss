@@ -28,6 +28,7 @@
   
   .emptyWishlist {
     width: 100%;
+    box-sizing: border-box;
     text-align: start;
     padding: 20px;
     border: 1px solid #ccc;
@@ -45,6 +46,7 @@
     font-size: 1.5em;
     font-weight: bold;
     margin: 10px 0;
+    overflow-wrap: break-word;
   }
   
   .description {
@@ -55,6 +57,10 @@
   @media (max-width: 480px) {
     .page {
       padding: 12px;
+    }
+
+    .emptyTitle {
+      font-size: 1.2em;
     }
   }
   

@@ -37,7 +37,7 @@ const SearchResultsPage = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Search Results for "{query}"</h1>
+      <h1 className={styles.heading}>Search Results for "{query}"</h1>
       <div className={styles.productsGrid}>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (

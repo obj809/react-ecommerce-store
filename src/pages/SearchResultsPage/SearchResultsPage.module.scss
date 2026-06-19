@@ -49,10 +49,23 @@
   padding: 20px 0;
 }
 
-.searchResult{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+/* Full width + wrapping so the heading and empty-state text don't overflow
+   as flex items in the centered column on narrow screens. */
+.heading {
   width: 100%;
+  margin: 0;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.searchResult {
+  width: 100%;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
 }

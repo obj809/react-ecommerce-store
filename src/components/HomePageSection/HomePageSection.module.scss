@@ -2,7 +2,11 @@
 
 .container {
     width: 100vw;
+    /* dvh tracks the mobile viewport as the address bar shows/hides, so each
+       full-screen section isn't clipped on phones; 100vh is the fallback for
+       browsers without dynamic-viewport units. */
     height: 100vh;
+    height: 100dvh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -60,6 +64,22 @@
       background-color: white;
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .button {
+      padding: 13px 24px;
+      font-size: 16px;
+    }
+
+    /* Bring the off-center buttons inward so they stay clear of the edges. */
+    .buttonContainer.top-right {
+      right: 12%;
+    }
+
+    .buttonContainer.top-left {
+      left: 8%;
     }
   }
 

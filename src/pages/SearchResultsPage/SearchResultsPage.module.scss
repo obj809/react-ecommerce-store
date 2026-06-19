@@ -13,12 +13,33 @@
 .productsGrid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   width: 100%;
 }
 
 .productsGrid p {
   flex: 1 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .productsGrid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+
+  .productsGrid {
+    gap: 12px;
+  }
 }
 
 .buttonContainer {

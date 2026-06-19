@@ -51,4 +51,10 @@
     font-size: 1em;
     margin: 10px 0;
   }
+
+  @media (max-width: 480px) {
+    .page {
+      padding: 12px;
+    }
+  }
   

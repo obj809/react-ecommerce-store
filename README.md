@@ -12,14 +12,14 @@ This e-shop is live! Check it out [here](https://summit-shop.netlify.app/).
 
 
 ## Table of Contents
-- [Goals & MVP](#goals--MVP)
+- [Goals & MVP](#goals--mvp)
 - [Tech Stack](#tech-stack)
 - [Build Steps](#build-steps)
+- [How to use](#how-to-use)
 - [Design Goals](#design-goals)
 - [Project Features](#project-features)
 - [Additions & Improvements](#additions--improvements)
 - [Learning Highlights](#learning-highlights)
-- [Known Issues](#known-issues)
 - [Challenges](#challenges)
 
 
@@ -28,18 +28,12 @@ The primary goal is to build a reactive e-shop website to demonstrate the abilit
 
 
 ## Tech Stack
-- HTML
-- CSS/SCSS
-- JavaScript
 - React
 - React Router DOM
 - Google Firestore
 - Stripe (test mode)
 - Netlify Functions (serverless)
-- Firebase Admin SDK
-- Bootstrap 5
-- FontAwesome
-- Midjourney AI
+- SCSS
 
 ## Build Steps
 ```bash
@@ -51,46 +45,36 @@ npm run build          # production build to dist/
 Environment variables are read from a gitignored `.env` (see `.env.example` for the full list): the `VITE_FIREBASE_*` keys for the Firebase Web SDK, plus `STRIPE_SECRET_KEY` (a test key), `STRIPE_WEBHOOK_SECRET`, and `FIREBASE_SERVICE_ACCOUNT` for the Stripe functions.
 
 ## How to use
-To start exploring the e-shop, visit the homepage where you can browse products, view details, and add items to your cart. Use the navigation links to switch between different views and manage your cart. At checkout, pay with the Stripe test card `4242 4242 4242 4242` (any future expiry and CVC) — no real payment is taken.
+To start exploring the e-shop, visit the homepage where you can browse products, view details, and add items to your cart. Use the navigation links to switch between different views and manage your cart. At checkout, pay with the Stripe test card `4242 4242 4242 4242` (any future expiry and CVC). No real payment is taken.
 
 
 ## Design Goals
 - Emphasized the use of functional components in React and hooks for state management. 
 - Decision to use Firestore was driven by the need for real-time data updates and easy scalability.
+- Centralized all Firestore access in a single service module so components stay presentational and data logic lives in one place.
 
 ## Project Features
-- [x] A dynamic carousel that swaps images on a timer
-- [x] Firestore seeder scripts for database population
-- [x] Product images generated exclusively by Midjourney AI
-- [x] Search functionality built into the NavBar
-- [x] Separate Cart database collection to separate concerns and improve scalability
-- [x] Ability to favorite products and add them to cart
 - [x] Stripe hosted checkout in test mode, powered by Netlify serverless functions
+- [x] Stock-aware cart that reserves inventory and auto-releases abandoned reservations
 - [x] Interactive star ratings that persist a running average per product
-- [x] Live cart and favorites count badges in the navigation bar
-- [x] Stock-aware cart quantities that stay in sync with product inventory
+- [x] Search functionality built into the NavBar
+- [x] Ability to favorite products and add them to cart
+- [x] A dynamic carousel that swaps images on a timer
 
 ## Additions & Improvements
 - [x] Change the landing page to be the products page while maintaining the current homepage
-- [x] Integration of Stripe for test mode transactions
-- [ ] Crop background on products page
-- [ ] Addition of mobile responsive design
 - [x] Release reserved stock from abandoned carts (scheduled reservation sweep)
+- [x] Mobile responsive design across the listing, product, and cart pages
+- [ ] Crop background on products page
 
 
 ## Learning Highlights
 - Building more dynamic components in React
 - Integration of a Firestore database
 - Creating JavaScript database seeding scripts
-- Dynamic filtering and searching of data on page 
-- JavaScript -> Firestore database seeding scripts
+- Dynamic filtering and searching of data on page
 - Integrating Stripe hosted checkout with Netlify serverless functions
 - Verifying Stripe webhooks and keeping inventory in sync server-side
-
-
-## Known Issues
-- The site is not yet optimised for mobile screens.
-- The size selected on the product page is not yet carried through to the cart.
 
 
 ## Challenges

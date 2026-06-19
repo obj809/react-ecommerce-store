@@ -16,3 +16,15 @@
     margin-bottom: 15px;
     justify-content: center;
 }
+
+@media (max-width: 768px) {
+    .content {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        gap: 16px;
+    }
+}

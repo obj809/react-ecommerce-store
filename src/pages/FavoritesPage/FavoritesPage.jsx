@@ -11,7 +11,7 @@ const FavoritesPage = () => {
     useEffect(() => {
         getAllProducts()
             .then((data) => {
-                const favoritedProducts = data.filter(product => product.favorited);
+                const favoritedProducts = data.filter(product => product.favourited);
                 setProducts(favoritedProducts);
             })
             .catch((e) => console.warn(e.message));
@@ -20,8 +20,8 @@ const FavoritesPage = () => {
     const handleFavoriteToggle = (productId, isFavorited) => {
         setProducts(currentProducts =>
             currentProducts.map(product => 
-                product.id === productId ? { ...product, favorited: isFavorited } : product
-            ).filter(product => product.favorited)
+                product.id === productId ? { ...product, favourited: isFavorited } : product
+            ).filter(product => product.favourited)
         );
     };
 
@@ -41,7 +41,7 @@ const FavoritesPage = () => {
                             <FavoritedCard 
                                 key={product.id} 
                                 product={product} 
-                                onFavoriteToggle={() => handleFavoriteToggle(product.id, !product.favorited)} 
+                                onFavoriteToggle={() => handleFavoriteToggle(product.id, !product.favourited)}
                             />
                         ))}
                     </div>

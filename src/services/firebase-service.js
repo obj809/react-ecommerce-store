@@ -31,7 +31,7 @@ import { db } from "../config/firestore.js";
 export const subscribeToFavoritesCount = (callback) => {
   const productsRef = collection(db, "products");
   return onSnapshot(productsRef, (snapshot) => {
-    const count = snapshot.docs.filter((doc) => doc.data().favorited).length;
+    const count = snapshot.docs.filter((doc) => doc.data().favourited).length;
     callback(count);
   });
 };
@@ -62,16 +62,6 @@ export const subscribeToCartCount = (callback) => {
     console.log("Product data:", snapshot.data());
     return { id: snapshot.id, ...snapshot.data() };
   };
-
-
-  export const toggleFavorite = async (product) => {
-    const docRef = doc(db, "products", product.id);
-    const newFavoritedState = !product.favourited;
-    await updateDoc(docRef, {
-        favourited: newFavoritedState
-    });
-    return newFavoritedState;
-};
 
 
   export const decreaseProductQuantity = async (id) => {

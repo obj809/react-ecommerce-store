@@ -9,6 +9,7 @@ import {
   getDocs,
   onSnapshot,
   runTransaction,
+  serverTimestamp,
   updateDoc,
   setDoc,
 } from "firebase/firestore";
@@ -103,11 +104,12 @@ export const incrementCartProductQuantity = async (productId) => {
       let currentCartQuantity = cartSnapshot.data().quantity;
       currentCartQuantity += 1;
       await updateDoc(cartRef, {
-        quantity: currentCartQuantity
+        quantity: currentCartQuantity,
+        updatedAt: serverTimestamp()
       });
       console.log("Cart updated: Quantity incremented");
     } else {
-      await setDoc(cartRef, { quantity: 1, product: productRef });
+      await setDoc(cartRef, { quantity: 1, product: productRef, updatedAt: serverTimestamp() });
       console.log("New cart item created with quantity set to 1");
     }
   } else {
@@ -137,7 +139,8 @@ export const incrementQuantityInCart = async (productId) => {
   if (cartSnap.exists()) {
       let newQuantity = cartSnap.data().quantity + 1;
       await updateDoc(cartRef, {
-          quantity: newQuantity
+          quantity: newQuantity,
+          updatedAt: serverTimestamp()
       });
       console.log("Cart quantity incremented to", newQuantity);
       return newQuantity;
@@ -170,7 +173,8 @@ export const decrementQuantityInCart = async (productId) => {
   if (cartSnap.exists() && cartSnap.data().quantity > 0) {
       let newQuantity = cartSnap.data().quantity - 1;
       await updateDoc(cartRef, {
-          quantity: newQuantity
+          quantity: newQuantity,
+          updatedAt: serverTimestamp()
       });
       console.log("Cart quantity decremented to", newQuantity);
       return newQuantity;
@@ -293,7 +297,10 @@ export const setCartItemQuantity = async (productId, newCartQuantity) => {
 
     const newStock = currentStock - delta;
     transaction.update(productRef, { quantity: newStock });
-    transaction.update(cartRef, { quantity: newCartQuantity });
+    transaction.update(cartRef, {
+      quantity: newCartQuantity,
+      updatedAt: serverTimestamp(),
+    });
 
     console.log(
       `Cart quantity set to ${newCartQuantity}; stock now ${newStock}`

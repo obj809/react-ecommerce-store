@@ -75,7 +75,7 @@ To start exploring the e-shop, visit the homepage where you can browse products,
 - [x] Integration of Stripe for test mode transactions
 - [ ] Crop background on products page
 - [ ] Addition of mobile responsive design
-- [ ] Release reserved stock from abandoned carts
+- [x] Release reserved stock from abandoned carts (scheduled reservation sweep)
 
 
 ## Learning Highlights
@@ -89,7 +89,6 @@ To start exploring the e-shop, visit the homepage where you can browse products,
 
 
 ## Known Issues
-- Cancelled or abandoned carts leave stock decremented (reserved) until the items are manually removed.
 - The site is not yet optimised for mobile screens.
 - The size selected on the product page is not yet carried through to the cart.
 

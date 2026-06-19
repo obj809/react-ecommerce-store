@@ -62,4 +62,19 @@
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
     }
   }
-  
+
+  @media (max-width: 480px) {
+    .button {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+
+    /* Pull the off-center buttons inward so they stay within the viewport. */
+    .buttonContainer.top-right {
+      right: 8%;
+    }
+
+    .buttonContainer.top-left {
+      left: 6%;
+    }
+  }

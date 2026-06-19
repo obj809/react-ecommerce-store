@@ -1,6 +1,9 @@
 /* NavBar.module.scss */
 
+/* Shared breakpoints: 992px (nav collapse), 768px (tablet), 480px (phone). */
+
 .nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +11,17 @@
   height: 80px;
   background-color: #f9f9f9;
   border-bottom: 2px solid black;
+}
+
+/* Hamburger toggle — hidden on desktop, shown when the nav collapses. */
+.menuToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .titleContainer {
@@ -114,4 +128,78 @@
 
 .icon.fa-search {
   cursor: pointer;
+}
+
+/* Collapse the category links into a hamburger-toggled dropdown panel. */
+@media (max-width: 992px) {
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-right: 0;
+  }
+
+  .menuToggle {
+    display: inline-flex;
+  }
+
+  /* Hidden until the hamburger opens it. */
+  .navLinksContainer {
+    display: none;
+    width: 100%;
+  }
+
+  .navLinksContainer.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid black;
+    padding: 1rem 0;
+    z-index: 999;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.25rem;
+  }
+
+  .icons {
+    gap: 1.5rem;
+  }
+
+  .icon {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0 0.75rem;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .logo {
+    height: 32px;
+    margin-right: 6px;
+  }
+
+  .icons {
+    gap: 1.1rem;
+  }
+
+  .icon {
+    font-size: 22px;
+  }
 }

@@ -3,6 +3,11 @@
   publish = "dist"
   functions = "netlify/functions"
 
+# Sweep abandoned cart reservations back to stock every 10 min (30-min TTL).
+# See netlify/functions/cart-reservation-sweep.js.
+[functions."cart-reservation-sweep"]
+  schedule = "*/10 * * * *"
+
 # Stripe webhook posts a raw body; never let any redirect rewrite it.
 # Functions are served from /.netlify/functions/* before this catch-all.
 

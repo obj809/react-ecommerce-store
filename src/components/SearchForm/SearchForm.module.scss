@@ -47,3 +47,14 @@
 .closeIcon {
   font-size: 1.15em;
 }
+
+@media (max-width: 480px) {
+  .searchForm {
+    padding: 6px;
+  }
+
+  .iconButton {
+    padding: 10px;
+    font-size: 24px;
+  }
+}

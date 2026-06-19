@@ -4,6 +4,7 @@
 // its redirect URL. Prices are read from Firestore SERVER-SIDE — amounts sent
 // by the browser are never trusted. Test-mode only (see _lib/stripe.js).
 
+import { FieldValue } from "firebase-admin/firestore";
 import { stripe } from "./_lib/stripe.js";
 import { db } from "./_lib/firebaseAdmin.js";
 
@@ -68,6 +69,17 @@ export const handler = async (event) => {
       });
       purchasedIds.push(id);
     }
+
+    // Touch each purchased cart doc so the reservation sweep treats this cart as
+    // active — an in-progress checkout must not be swept back to stock while the
+    // customer is on Stripe's hosted page (see cart-reservation-sweep.js).
+    const touch = db.batch();
+    for (const id of purchasedIds) {
+      touch.update(db.collection("cart").doc(id), {
+        updatedAt: FieldValue.serverTimestamp(),
+      });
+    }
+    await touch.commit();
 
     // Origin of the request, used to build absolute return URLs.
     const origin =

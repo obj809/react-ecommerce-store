@@ -92,3 +92,30 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
+
+/* Stack the cart items above the order summary on tablets and phones. */
+@media (max-width: 768px) {
+    .title,
+    .container {
+        width: 95%;
+    }
+
+    .populatedContainer {
+        flex-direction: column;
+    }
+
+    .contents,
+    .rightSide {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 1.6em;
+    }
+}

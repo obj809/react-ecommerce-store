@@ -126,3 +126,38 @@
     right: 10px;
     z-index: 10;
 }
+
+/* Stack the image above the text card on tablets and phones. */
+@media (max-width: 768px) {
+    .productBox {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .textCard {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+
+    .textCard {
+        padding: 18px;
+        gap: 10px;
+    }
+
+    .productName {
+        font-size: 1.5em;
+    }
+
+    .newPrice {
+        font-size: 1.3em;
+    }
+
+    .backButton {
+        width: 100%;
+    }
+}

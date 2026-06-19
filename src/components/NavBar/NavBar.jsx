@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faUser, faHeart, faShoppingCart, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import logo from '/summit-shop-logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SearchForm from '../SearchForm/SearchForm';
@@ -12,6 +12,7 @@ import styles from './NavBar.module.scss';
 
 const NavBar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [favoritesCount, setFavoritesCount] = useState(0);
   const [cartCount, setCartCount] = useState(0);
 
@@ -28,6 +29,14 @@ const NavBar = () => {
     setIsSearchOpen(!isSearchOpen);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen((open) => !open);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const closeSearchForm = () => {
     setIsSearchOpen(false);
   };
@@ -42,24 +51,24 @@ const NavBar = () => {
           <img src={logo} alt="Summit Shop Logo" className={styles.logo} />
           <span className={styles.title}>Summit Shop</span>
         </NavLink>
-        <div className={styles.navLinksContainer}>
+        <div className={`${styles.navLinksContainer} ${isMenuOpen ? styles.open : ''}`}>
           <div className={styles.navLinks}>
-            <NavLink className={linkStyles} to="/products">
+            <NavLink className={linkStyles} to="/products" onClick={closeMenu}>
               All Products
             </NavLink>
-            <NavLink className={linkStyles} to="/jackets-vests">
+            <NavLink className={linkStyles} to="/jackets-vests" onClick={closeMenu}>
               Jackets & Vests
             </NavLink>
-            <NavLink className={linkStyles} to="/tops">
+            <NavLink className={linkStyles} to="/tops" onClick={closeMenu}>
               Tops
             </NavLink>
-            <NavLink className={linkStyles} to="/bottoms">
+            <NavLink className={linkStyles} to="/bottoms" onClick={closeMenu}>
               Bottoms
             </NavLink>
-            <NavLink className={linkStyles} to="/accessories">
+            <NavLink className={linkStyles} to="/accessories" onClick={closeMenu}>
               Accessories
             </NavLink>
-            <NavLink className={linkStyles} to="/equipment">
+            <NavLink className={linkStyles} to="/equipment" onClick={closeMenu}>
               Equipment
             </NavLink>
           </div>
@@ -74,6 +83,15 @@ const NavBar = () => {
             <FontAwesomeIcon icon={faShoppingCart} className={styles.icon} />
             {cartCount > 0 && <span className={styles.badge}>{cartCount}</span>}
           </NavLink>
+          <button
+            type="button"
+            className={styles.menuToggle}
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+          >
+            <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} className={styles.icon} />
+          </button>
         </div>
       </div>
       {isSearchOpen && <SearchForm onClose={closeSearchForm} />}

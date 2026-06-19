@@ -81,3 +81,11 @@
   margin-left: auto;
   z-index: 1;
 }
+
+/* Never let the fixed-width card overflow a narrow phone. */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+}

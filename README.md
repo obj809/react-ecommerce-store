@@ -62,25 +62,23 @@ To start exploring the e-shop, visit the homepage where you can browse products,
 - [x] A dynamic carousel that swaps images on a timer
 
 ## Additions & Improvements
-- [x] Change the landing page to be the products page while maintaining the current homepage
-- [x] Release reserved stock from abandoned carts (scheduled reservation sweep)
-- [x] Mobile responsive design across the listing, product, and cart pages
-- [ ] Crop background on products page
+- [ ] User authentication with per-user accounts and carts
+- [ ] Sell real products with live Stripe payments (beyond test mode)
 
 
 ## Learning Highlights
-- Building more dynamic components in React
-- Integration of a Firestore database
-- Creating JavaScript database seeding scripts
-- Dynamic filtering and searching of data on page
-- Integrating Stripe hosted checkout with Netlify serverless functions
-- Verifying Stripe webhooks and keeping inventory in sync server-side
+- Building reusable, data-driven React components with hooks
+- Integrating Firestore behind a single centralized data-service module
+- Integrating Stripe hosted checkout via Netlify serverless functions, with prices re-read server-side so client amounts are never trusted
+- Verifying Stripe webhooks for fulfillment and keeping stock in sync via Firestore transactions
+- Releasing abandoned-cart stock reservations with a scheduled Netlify function
 
 
 ## Challenges
-- Building carousel 
-- Fetching product data
+- Keeping the products and cart collections in sync via the stock/reservation invariant
+- Releasing reserved stock from abandoned carts without restocking items mid-checkout
 - Wiring Stripe checkout to a serverless backend without a traditional server
+- Verifying Stripe webhook signatures against the raw request body
 
 
 ## Contact Me
